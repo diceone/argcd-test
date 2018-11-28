@@ -1,0 +1,20 @@
+---
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: devwebsite
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: devwebsite
+  template:
+    metadata:
+      labels:
+        app: devwebsite
+    spec:
+      containers:
+      - image: diceone/devops:latest
+        name: devwebsite
+        ports:
+- containerPort: 80
