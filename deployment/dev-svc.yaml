@@ -1,0 +1,12 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: devwebsite
+spec:
+  ports:
+  - port: 80
+    targetPort: 80
+  selector:
+    app: devwebsite
+type: LoadBalancer
